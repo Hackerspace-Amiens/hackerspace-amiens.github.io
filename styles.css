@@ -1,0 +1,79 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic);
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: linear-gradient(100deg, rgba(48,35,174,0.3), rgba(200,109,215,0.3)),  url('http://c1.staticflickr.com/8/7188/27797862721_4044834b1c_b.jpg');
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color:#fff;
+}
+.tagline {
+  margin-top: 200px;
+  text-align: center;
+  color: #fff;
+  font-weight:100;
+  font-size: 75px;
+}
+.change-container {
+  position: relative;
+  display: inline-block;
+  width:400px;
+  border-bottom: 1px solid #FFF;
+  margin-bottom:-10px;
+}
+.changing {
+  position:absolute;
+  overflow:hidden;
+  display: inline-block;
+  color: #FFF;
+  width:100%;
+  left:0;
+  bottom:0;
+  height:0;
+  opacity:0;
+  text-rendering:optimizeLegibility;
+  animation : revealNextWord 8s ease-in-out infinite;
+}
+
+.changing:nth-child(2) {
+  animation-delay:2s;
+}
+.changing:nth-child(3) {
+  animation-delay:4s;
+}
+.changing:nth-child(4) {
+  animation-delay:6s;
+}
+
+footer {
+  padding: 20px 60px;
+  width:100%;
+  position: fixed;
+  bottom: 0;
+}
+
+p {
+  display: inline-block;
+}
+
+.pull-right {
+  float: right;
+  margin-right: 125px;
+
+}
+
+a {
+  text-decoration: none;
+  color: #1dd2af;
+}
+
+@keyframes revealNextWord {
+    0% { opacity: .3; height: 0; }
+    10% { opacity: 1; height: 1.2em; }
+    20% { opacity: 1; height: 1.2em; }
+	  28% { opacity: 0; height:2em;}
+    100% { opacity: 0; }
+}
